@@ -20,6 +20,7 @@ void showMenu()
     std::cout << "\nETAPA 2 DO PROJETO\n";
     std::cout << "(10) - Mostrar a conexidade do grafo\n";
     std::cout << "(11) - Determinar a melhor rota\n";
+    std::cout << "(12) Diretirzes da ODS\n";
     std::cout << "(0) - Encerrar a aplicação\n";
 }
 
@@ -106,6 +107,13 @@ int main()
             std::cout << "Insira o nome do aeroporto de destino: ";
             std::cin >> aeroporto2;
             g.melhorRota(aeroporto1, aeroporto2);
+            break;
+
+        case 12:
+            std::cout << "\nEste programa apoia os objetivos 8 e 9 da ODS.\n";
+            std::cout << "8. Trabalho Descente e Crescimento Econômico.\n";
+            std::cout << "9. Indústria, Inovação e Infraestrutura.\n";
+
             break;
 
         case 0:

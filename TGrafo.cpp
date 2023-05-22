@@ -233,8 +233,8 @@ TGrafo::~TGrafo()
 {
     n = 0;
     m = 0;
-    delete[] * adjDistancia;
-    delete[] * adjTempo;
+    delete[] *adjDistancia;
+    delete[] *adjTempo;
     std::cout << "espaço liberado.\n";
 }
 
@@ -676,13 +676,13 @@ void TGrafo::determinarConexidade()
 {
     std::string categoria;
     if (this->fconexo())
-        categoria = "C3";
+        categoria = "C3 - Fortemente conexo.";
     else if (this->sfconexo())
-        categoria = "C2";
+        categoria = "C2 - Semifortemente conexo e não Fortemente conexo.";
     else if (this->desconexo())
-        categoria = "C0";
+        categoria = "C0 - Desconexo.";
     else
-        categoria = "C1";
+        categoria = "C1 - Simplesmente conexo e não Semifortemente conexo.";
     std::cout << "\nCategoria de conexidade: " << categoria << std::endl;
 };
 
